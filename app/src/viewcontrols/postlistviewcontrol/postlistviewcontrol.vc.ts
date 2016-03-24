@@ -3,7 +3,7 @@ import BaseViewControl from '../base/base.vc';
 import BlogService from '../../services/blogservice/blogservice.svc';
 
 
-export default class PostListViewControlViewControl extends BaseViewControl {
+export default class PostListViewControl extends BaseViewControl {
     templateString: string = require('./postlistviewcontrol.vc.html');
     
     constructor(private blogSvc: BlogService) {
@@ -22,4 +22,4 @@ export default class PostListViewControlViewControl extends BaseViewControl {
    }
 }
 
-register.viewControl('postlistviewcontrol-vc', PostListViewControlViewControl, [BlogService]);
+register.viewControl('postlistviewcontrol-vc', PostListViewControl, [BlogService]);
