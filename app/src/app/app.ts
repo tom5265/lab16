@@ -2,6 +2,7 @@ import {App, events, register, routing, web} from 'platypus';
 import HomeViewControl from '../viewcontrols/home/home.vc';
 import PostListViewControl from '../viewcontrols/postlistviewcontrol/postlistviewcontrol.vc';
 import SinglePostViewControl from '../viewcontrols/singlepostviewcontrol/singlepostviewcontrol.vc';
+import ComposePostViewControl from '../viewcontrols/composepostviewcontrol/composepostviewcontrol.vc';
 
 export default class MyApp extends App {
     constructor(router: routing.Router, config: web.IBrowserConfig) {
@@ -12,8 +13,8 @@ export default class MyApp extends App {
         router.configure([
             { pattern: '/', view: HomeViewControl },
             { pattern: '/posts', view: PostListViewControl },
-            { pattern: '/posts/:id', view: SinglePostViewControl }
-            
+            { pattern: '/posts/:id', view: SinglePostViewControl },
+            { pattern: '/compose', view: ComposePostViewControl }     
         ]);
     }
 

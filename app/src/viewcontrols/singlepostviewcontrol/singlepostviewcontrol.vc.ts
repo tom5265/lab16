@@ -14,7 +14,6 @@ export default class SinglePostViewControl extends BaseViewControl {
        navigatedTo(params: any): void {
        this.blogSvc.getSinglePost(params.id).then((post) => {
            this.context.post = post;
-           console.log(post);
        });
        }
    }
