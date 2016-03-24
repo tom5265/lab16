@@ -1,8 +1,15 @@
 import {async, register} from 'platypus';
 import BaseService from '../base/base.svc';
 
-export default class BlogServiceService extends BaseService {
-
+export default class BlogService extends BaseService {
+    getPosts(): async.IAjaxThenable<Array<models.IPost>> {
+       return this.http.json<any>({
+        url: this.host + '/posts',
+        method: 'GET',
+    }).then((data) => {
+        return data.response;
+    });
+    }
 }
 
-register.injectable('blogservice-svc', BlogServiceService);
+register.injectable('blogservice-svc', BlogService);

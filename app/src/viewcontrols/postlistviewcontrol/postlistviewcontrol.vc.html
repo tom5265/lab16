@@ -1,1 +1,11 @@
-<h1>Hello World!</h1>
+<div class="container">
+    <h1>My Posts</h1>
+    <div class="posts">
+        <plat-foreach plat-context="posts">
+            <h2>{{title}}</h2>
+            <h4>{{author}}</h4>
+            <p>{{createdAt}}</p>
+            <plat-button class="button-primary button-outline">View Post</plat-button>
+        </plat-foreach>
+    </div>
+</div>
