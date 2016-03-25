@@ -11,7 +11,7 @@ export default class PostListViewControl extends BaseViewControl {
     }
 
     context: any = {
-        
+        posts: <Array<models.IPost>>[]
     };
     
     navigatedTo(): void {
