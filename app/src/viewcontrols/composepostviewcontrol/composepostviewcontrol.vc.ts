@@ -23,9 +23,11 @@ constructor(private blogSvc: BlogService) {
     
    send() {
        let message = {title: this.context.title, author: this.context.author, content: this.context.content};
-       this.blogSvc.sendPost(message);
+       this.blogSvc.sendPost(message).then;
+       this.navigator.navigate(PostListViewControl);     
+   }
+   goHome() {
        this.navigator.navigate(PostListViewControl);
-       
    }
    
 }
